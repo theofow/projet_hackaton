@@ -33,14 +33,17 @@ class Battery:
     def __init__(self):
         self.percent = 100
         self.level = 1
-        
-    def using_battery(self):
-        self.percent = self.percent - 1
+
+class Stock:
+    def __init__(self):
+        self.max = 10
+        self.content = []
 
 class Robot:
     def __init__(self):
         self.position = Position()
         self.battery = Battery()
+        self.stock = Stock()
 
 class Bank:
     def __init__(self):
