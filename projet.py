@@ -25,8 +25,8 @@ class Position:
         self.y = 0
         
     def random_pos(self):
-        self.x = randint(0,255)
-        self.y = randint(0,255)
+        self.x = randint(0,20)
+        self.y = randint(0,20)
     
     
 class Battery:
@@ -40,10 +40,11 @@ class Stock:
         self.content = []
 
 class Robot:
-    def __init__(self):
-        self.position = Position()
+    def __init__(self, position=None):
+        self.position = position if position else Position()
         self.battery = Battery()
         self.stock = Stock()
+
 
 class Bank:
     def __init__(self):
