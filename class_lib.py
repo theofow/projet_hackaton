@@ -15,36 +15,29 @@ import pygame
 # de manipuler la position formelle de l'objet, c'est à dire sa position
 # dans la fenêtre.
 
-class Grille:
-    def __init__(self):
-        self.X = 0
-        self.Y = 0
-        self.XY = (self.X,self.Y)
-    def deplace_g(self,bx,by):
-        self.X = self.X+bx
-        self.Y = self.Y+by
-
-
-
-
-
 # Position définit la position d'un objet sur la map.
 # Elle dispose de plusieurs méthodes permettant le déplacement par exemple.
 # Tous les objets sont régis par cette classe.
 
-class Position(Grille):
+class Position():
     def __init__(self):
-        self.x = 54*Grille.X
-        self.y = 48*Grille.Y
+        self.X = 0
+        self.Y = 0
+        self.XY = (self.X,self.Y)
+        self.x = 54*self.X
+        self.y = 48*self.Y
         self.xy = (self.x,self.y)
     def coo(self):
-        return self.x, self.y
+        return self.X, self.Y
     
     def deplace(self, ax, ay):
-        self.x = self.x + ax
-        self.y = self.y + ay
+        self.x = self.x + ax*54
+        self.y = self.y + ay*48
         self.xy = (self.x,self.y)
-    
+        self.X = self.X+ax
+        self.Y = self.Y+ay
+        self.XY = (self.X,self.Y)
+        
     def reset_pos(self):
         self.x = 0
         self.y = 0
