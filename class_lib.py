@@ -22,8 +22,8 @@ import pygame
 
 class Position():
     def __init__(self):
-        self.X = 0
-        self.Y = 0
+        self.X = 1
+        self.Y = 2
         self.XY = (self.X,self.Y)
         self.x = 54*self.X
         self.y = 48*self.Y
@@ -32,12 +32,12 @@ class Position():
         return self.X, self.Y
     
     def deplace(self, ax, ay):
-        self.x = self.x + ax*54
-        self.y = self.y + ay*48
-        self.xy = (self.x,self.y)
-        self.X = self.X+ax
-        self.Y = self.Y+ay
-        self.XY = (self.X,self.Y)
+            self.x = self.x + ax*54
+            self.y = self.y + ay*48
+            self.xy = (self.x,self.y)
+            self.X = self.X+ax
+            self.Y = self.Y+ay
+            self.XY = (self.X,self.Y)
         
     def set_pos(self,bx,by):
         self.X = bx
@@ -46,8 +46,8 @@ class Position():
         self.y = self.Y*48
         
     def random_pos(self):
-        self.set_pos(randint(0,19),randint(0,14))
-
+        #self.set_pos(randint(0,19),randint(0,14))
+        self.set_pos(randint(7,8),randint(7,8))
 # Battery définit la batterie des robots et diminue avec les déplacement.
 
 class Battery:
@@ -113,6 +113,15 @@ class Ressource:
     def __init__(self):
         self.id = randint(1, 4)
         self.position = Position()
+        if self.id == 1:
+            self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/pierre.png"), (52, 46))
+        if self.id == 2:
+            self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/bois.png"), (52, 46))
+        if self.id == 3:
+            self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/eau.png"), (52, 46))
+        if self.id == 4:
+            self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/or.png"), (52, 46))
+            
         # prix à ajouter
 
 
