@@ -3,6 +3,7 @@
 #############################################################
 
 from random import randint
+import pygame
 
 
 #############################################################
@@ -33,7 +34,7 @@ class Position:
         
     def random_pos(self):
         self.x = randint(0,20)
-        self.y = randint(0,20)
+        self.y = randint(0,15)
     
 
 # Battery définit la batterie des robots et diminue avec les déplacement.
@@ -50,13 +51,21 @@ class Stock:
         self.max = 10
         self.content = []
 
+# La Team change le point d'apparition du robot
+
+
 # Robot représente un robot au départ
 
-class Robot:
-    def __init__(self, position=None):
-        self.position = position if position else Position()
+class Robot(pygame.sprite.Sprite):
+    def __init__(self):
+        self.position = Position()
         self.battery = Battery()
         self.stock = Stock()
+        self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (50, 45))
+        self.rect = self.image.get_rect()
+        
+
+
 
 # Bank est la classe définissant le score obtenu par les robots
 
@@ -85,4 +94,11 @@ class Ressource:
 
 
 # création d'un agent (test)
-agent_1 = Robot()
+
+
+class Game:
+    def __init__(self):
+        self.robot = Robot()
+
+
+
