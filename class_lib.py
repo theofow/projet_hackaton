@@ -1,5 +1,6 @@
 import random
 import pygame
+import time
 
 class Position:
     def __init__(self):
@@ -13,9 +14,9 @@ class Position:
         return self.x, self.y
 
     def deplace(self, ax, ay):
-        if 0 <= self.x + ax <= self.width - 50:  # Vérifie si le robot ne sort pas de la largeur de l'écran
+        if 0 <= self.x + ax <= self.width - 54:  # Vérifie si le robot ne sort pas de la largeur de l'écran
             self.x = self.x + ax
-        if 0 <= self.y + ay <= self.height - 45:  # Vérifie si le robot ne sort pas de la hauteur de l'écran
+        if 0 <= self.y + ay <= self.height - 48:  # Vérifie si le robot ne sort pas de la hauteur de l'écran
             self.y = self.y + ay
         self.xy = (self.x, self.y)
 
@@ -34,7 +35,7 @@ class Robot:
         self.position = Position()
         self.battery = Battery()
         self.stock = Stock()
-        self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (50, 45))
+        self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (51, 45))
 
 class Bank:
     def __init__(self):
@@ -52,14 +53,14 @@ def random_move(robot):
     direction = random.choice(directions)
     if direction == "up":
         if robot.position.y > 0:
-            robot.position.deplace(0, -46)
+            robot.position.deplace(0, -48)
     elif direction == "down":
         if robot.position.y < 720:
-            robot.position.deplace(0, 46)
+            robot.position.deplace(0, 48)
     elif direction == "left":
         if robot.position.x > 0:
-            robot.position.deplace(-52, 0)
+            robot.position.deplace(-54, 0)
     elif direction == "right":
         if robot.position.x < 1080:
-            robot.position.deplace(52, 0)
+            robot.position.deplace(54, 0)
     time.sleep(1)
