@@ -15,6 +15,9 @@ background = pygame.transform.scale(background, (1080, 720))
 
 
 robot1 = Robot()
+robot2 = Robot()
+
+robot2.position.set_pos(19,0)
 
 print(robot1.position)
 running = True
@@ -25,8 +28,10 @@ while running :
     screen.blit(background, (0, 0))
 
 
-    screen.blit(robot1.image, robot1.position.xy)
+    screen.blit(robot2.image, robot2.position.xy)
 
+    screen.blit(robot1.image, robot1.position.xy)
+   
     
 
     pygame.display.flip()
@@ -46,7 +51,15 @@ while running :
         # DEPLACEMENT DU ROBOT
 
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
+            if event.key == pygame.K_d:
+                robot2.position.deplace(1,0)
+            elif event.key == pygame.K_q:
+                robot2.position.deplace(-1,0)
+            elif event.key == pygame.K_s:
+                robot2.position.deplace(0,1)
+            elif event.key == pygame.K_z:
+                robot2.position.deplace(0,-1)
+            elif event.key == pygame.K_RIGHT:
                 robot1.position.deplace(1,0)
             elif event.key == pygame.K_LEFT:
                 robot1.position.deplace(-1,0)

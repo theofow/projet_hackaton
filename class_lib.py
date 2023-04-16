@@ -38,13 +38,14 @@ class Position():
         self.Y = self.Y+ay
         self.XY = (self.X,self.Y)
         
-    def reset_pos(self):
-        self.x = 0
-        self.y = 0
+    def set_pos(self,bx,by):
+        self.X = bx
+        self.Y = by
+        self.x = self.X*54
+        self.y = self.Y*48
         
     def random_pos(self):
-        self.x = randint(0,20)
-        self.y = randint(0,15)
+        self.set_pos(randint(0,19),randint(0,14))
 
 # Battery définit la batterie des robots et diminue avec les déplacement.
 
