@@ -16,11 +16,16 @@ import pygame
 # dans la fenêtre.
 
 class Grille:
-    X = 0
-    Y = 0
-
     def __init__(self):
-        pass
+        self.X = 0
+        self.Y = 0
+        self.XY = (self.X,self.Y)
+    def deplace_g(self,bx,by):
+        self.X = self.X+bx
+        self.Y = self.Y+by
+
+
+
 
 
 # Position définit la position d'un objet sur la map.
@@ -29,26 +34,24 @@ class Grille:
 
 class Position(Grille):
     def __init__(self):
-        self.x = 54 * Grille.X
-        self.y = 48 * Grille.Y
-        self.xy = (self.x, self.y)
-
+        self.x = 54*Grille.X
+        self.y = 48*Grille.Y
+        self.xy = (self.x,self.y)
     def coo(self):
         return self.x, self.y
-
+    
     def deplace(self, ax, ay):
         self.x = self.x + ax
         self.y = self.y + ay
-        self.xy = (self.x, self.y)
-
+        self.xy = (self.x,self.y)
+    
     def reset_pos(self):
         self.x = 0
         self.y = 0
-
+        
     def random_pos(self):
-        self.x = randint(0, 20)
-        self.y = randint(0, 15)
-
+        self.x = randint(0,20)
+        self.y = randint(0,15)
 
 # Battery définit la batterie des robots et diminue avec les déplacement.
 
