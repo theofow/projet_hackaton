@@ -14,8 +14,9 @@ background = pygame.transform.scale(background, (1080, 720))
 
 
 
-game = Game()
+robot1 = Robot()
 
+print(robot1.position)
 running = True
 
 while running :
@@ -24,15 +25,26 @@ while running :
     screen.blit(background, (0, 0))
 
 
-    screen.blit(game.robot.image, (0, 0))
+    screen.blit(robot1.image, robot1.position.xy)
 
     
 
     pygame.display.flip()
 
     for event in pygame.event.get():
+        # Cette boucle représente les évènements càd les éléments qui donnent 
+        # vie au jeu et qui permette l'intéraction avec l'utilisateur
+
+
+        # FERMETURE DU PROGRAMME
 
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
-            print("Fermeture du jeu...")
+            print("Fermeture du programme...")
+
+        # DEPLACEMENT DU ROBOT
+
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RIGHT:
+                robot1.position.deplace(5,0)

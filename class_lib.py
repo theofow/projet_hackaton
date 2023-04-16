@@ -20,13 +20,14 @@ class Position:
     def __init__(self):
         self.x = 0
         self.y = 0
-
+        self.xy = (self.x,self.y)
     def coo(self):
         return self.x, self.y
     
     def deplace(self, ax, ay):
         self.x = self.x + ax
         self.y = self.y +ay
+        self.xy = (self.x,self.y)
     
     def reset_pos(self):
         self.x = 0
@@ -58,11 +59,12 @@ class Stock:
 
 class Robot(pygame.sprite.Sprite):
     def __init__(self):
+        super().__init__()
         self.position = Position()
         self.battery = Battery()
         self.stock = Stock()
         self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (50, 45))
-        self.rect = self.image.get_rect()
+        #self.rect = self.image.get_rect()
         
 
 
