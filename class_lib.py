@@ -74,7 +74,17 @@ class Robot(pygame.sprite.Sprite):
         self.position = Position()
         self.battery = Battery()
         self.stock = Stock()
-        self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (52, 46))
+        self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_right.png"), (52, 46))
+            
+    def switch_sprite(self, dir):
+        if dir == "up":
+            self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_up.png"), (52, 46))
+        elif dir == "down":
+            self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_down.png"), (52, 46))
+        elif dir == "left":
+            self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_left.png"), (52, 46))
+        elif dir == "right":
+            self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_right.png"), (52, 46))
         # self.rect = self.image.get_rect()
 
 

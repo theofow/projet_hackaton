@@ -53,18 +53,26 @@ while running :
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
                 robot2.position.deplace(1,0)
+                robot2.switch_sprite("right")
             elif event.key == pygame.K_q:
                 robot2.position.deplace(-1,0)
+                robot2.switch_sprite("left")
             elif event.key == pygame.K_s:
                 robot2.position.deplace(0,1)
+                robot2.switch_sprite("down")
             elif event.key == pygame.K_z:
                 robot2.position.deplace(0,-1)
+                robot2.switch_sprite("up")
             elif event.key == pygame.K_RIGHT:
                 robot1.position.deplace(1,0)
+                robot1.switch_sprite("right")
             elif event.key == pygame.K_LEFT:
                 robot1.position.deplace(-1,0)
+                robot1.switch_sprite("left")
             elif event.key == pygame.K_DOWN:
                 robot1.position.deplace(0,1)
+                robot1.switch_sprite("down")
             elif event.key == pygame.K_UP:
                  robot1.position.deplace(0,-1)
+                 robot1.switch_sprite("up")
 
