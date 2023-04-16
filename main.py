@@ -35,6 +35,8 @@ robot2 = Robot()
 
 robot2.position.set_pos(19,0)
 
+teste = Ressource()
+
 
 
 #############################################################
@@ -52,6 +54,8 @@ while running :
     screen.blit(robot2.image, robot2.position.xy)
 
     screen.blit(robot1.image, robot1.position.xy)
+    
+    screen.blit(teste.image, teste.position.xy)
    
     
 
