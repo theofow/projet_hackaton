@@ -6,6 +6,7 @@ from random import randint
 import pygame
 
 
+
 #############################################################
 #                         CLASSES                           #
 #############################################################
@@ -75,7 +76,7 @@ class Robot(pygame.sprite.Sprite):
         self.battery = Battery()
         self.stock = Stock()
         self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_right.png"), (52, 46))
-            
+
     def switch_sprite(self, dir):
         if dir == "up":
             self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_up.png"), (52, 46))

@@ -1,25 +1,46 @@
+#############################################################
+#                         IMPORTS                           #
+#############################################################
+
 import pygame
 from class_lib import *
+from pygame.locals import *
+from pygame import mixer
+
+
+#############################################################
+#               GENERATION DE LA FENETRE                    #
+#############################################################
 
 pygame.init()
 
-
-#génération de la fenêtre
 pygame.display.set_caption("Pojet : ROBOT")
 screen = pygame.display.set_mode((1080, 720))
-background = pygame.image.load("map.jpg")
+background = pygame.image.load("annexes/map.jpg")
 background = pygame.transform.scale(background, (1080, 720))
 
+mixer.init()
+mixer.music.load('annexes/music.ogg')
+mixer.music.play()
 
 
 
+#############################################################
+#               MISE EN PLACE DES ELEMENTS                  #
+#############################################################
 
+# Robots
 robot1 = Robot()
 robot2 = Robot()
 
 robot2.position.set_pos(19,0)
 
-print(robot1.position)
+
+
+#############################################################
+#                        LANCEMENT                          #
+#############################################################
+
 running = True
 
 while running :
@@ -52,7 +73,6 @@ while running :
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
-                
                 robot2.position.deplace(1,0)
                 robot2.switch_sprite("right")
             elif event.key == pygame.K_q:
