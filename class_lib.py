@@ -52,13 +52,14 @@ def random_move(robot):
     direction = random.choice(directions)
     if direction == "up":
         if robot.position.y > 0:
-            robot.position.deplace(0, -1)
+            robot.position.deplace(0, -46)
     elif direction == "down":
         if robot.position.y < 720:
-            robot.position.deplace(0, 1)
+            robot.position.deplace(0, 46)
     elif direction == "left":
         if robot.position.x > 0:
-            robot.position.deplace(-1, 0)
+            robot.position.deplace(-52, 0)
     elif direction == "right":
         if robot.position.x < 1080:
-            robot.position.deplace(1, 0)
+            robot.position.deplace(52, 0)
+    time.sleep(1)
