@@ -6,10 +6,12 @@ Ce projet consiste en la création d'un système de ressource où plusieurs agen
 
 Liste des ressources:
 
-ID: 001 - Pierre
-ID: 002 - Bois
-ID: 003 - Eau
-ID: 004 - Or
+|   ID  | Ressource |
+|:-----:|-----------|
+| `001` | Pierre    |
+| `002` | Bois      |
+| `003` | Eau       |
+| `004` | Or        |
 
 Comment jouer:
 
