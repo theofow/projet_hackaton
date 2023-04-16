@@ -26,7 +26,7 @@ class Position:
     
     def deplace(self, ax, ay):
         self.x = self.x + ax
-        self.y = self.y +ay
+        self.y = self.y + ay
         self.xy = (self.x,self.y)
     
     def reset_pos(self):
@@ -63,7 +63,7 @@ class Robot(pygame.sprite.Sprite):
         self.position = Position()
         self.battery = Battery()
         self.stock = Stock()
-        self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (50, 45))
+        self.image = pygame.transform.scale(pygame.image.load("robot_sprite.png"), (52, 46))
         #self.rect = self.image.get_rect()
         
 

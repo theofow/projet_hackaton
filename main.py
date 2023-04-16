@@ -47,4 +47,11 @@ while running :
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
-                robot1.position.deplace(5,0)
+                robot1.position.deplace(54,0)
+            elif event.key == pygame.K_LEFT:
+                robot1.position.deplace(-54,0)
+            elif event.key == pygame.K_DOWN:
+                robot1.position.deplace(0,48)
+            elif event.key == pygame.K_DOWN:
+                robot1.position.deplace(0,-48)
+
