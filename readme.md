@@ -1,4 +1,4 @@
-<img src="esilv_logo.png" alt="drawing" width="50"/> 
+<img src="annexes/esilv_logo.png" alt="drawing" width="50"/> 
 
 # Projet hackathon
 
@@ -70,14 +70,14 @@ Voici quelques précisions à prendre en compte dans le cadre de ce projet :
 
 Dans un premier temps, il est nécessaire de mettre en place l'environnement dans lequel nous allons travailler.
 
-## Installation de <img src="git_logo.png" alt="drawing" width="50"/>
+## Installation de <img src="annexes/git_logo.png" alt="drawing" width="50"/>
 
 
 - Télécharger git 
 
 L'installation peut s'effectuer sur internet via [ce lien](https://git-scm.com/downloads).
 
-<img src="screen_git.png" alt="drawing" width="500"/> 
+<img src="annexes/screen_git.png" alt="drawing" width="500"/> 
 
 Une fois le téléchargement terminé, procéder à l'installation.
 
@@ -85,7 +85,7 @@ Une fois le téléchargement terminé, procéder à l'installation.
 
 Pour commencer, il faut cloner le repository github sur l'ordinateur utilisé.
 
-<img src="screen_vscode.png" alt="drawing" width="500"/> 
+<img src="annexes/screen_vscode.png" alt="drawing" width="500"/> 
 
 Entrez la clé __HTTP__ du repository.
 
