@@ -11,16 +11,28 @@ import pygame
 #                         CLASSES                           #
 #############################################################
 
+# La classe grille correspond aux coordonnées d'un objet sur la grille
+# Elle fonctionne en concert avec la classe Position qui elle permet
+# de manipuler la position formelle de l'objet, c'est à dire sa position
+# dans la fenêtre.
+
+class Grille:
+    def __init__(self):
+        self.X = 0
+        self.Y = 0
+
+
+
 
 
 # Position définit la position d'un objet sur la map.
 # Elle dispose de plusieurs méthodes permettant le déplacement par exemple.
 # Tous les objets sont régis par cette classe.
 
-class Position:
+class Position(Grille):
     def __init__(self):
-        self.x = 0
-        self.y = 0
+        self.x = 54*Grille.X
+        self.y = 48*Grille.Y
         self.xy = (self.x,self.y)
     def coo(self):
         return self.x, self.y
@@ -37,7 +49,8 @@ class Position:
     def random_pos(self):
         self.x = randint(0,20)
         self.y = randint(0,15)
-    
+
+
 
 # Battery définit la batterie des robots et diminue avec les déplacement.
 
