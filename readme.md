@@ -89,6 +89,13 @@ Pour commencer, il faut cloner le repository github sur l'ordinateur utilisé.
 
 Entrez la clé __HTTP__ du repository.
 
+
+## Installation de PYGAME
+
+- Intaller pygame sur vscode
+`pip install pygame`
+
+
 Note:
 
 1.Le système de ressource est ouvert à tous les joueurs.
