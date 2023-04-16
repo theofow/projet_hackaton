@@ -52,6 +52,7 @@ while running :
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
+                
                 robot2.position.deplace(1,0)
                 robot2.switch_sprite("right")
             elif event.key == pygame.K_q:
