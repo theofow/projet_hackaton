@@ -33,10 +33,10 @@ mixer.music.play()
 robot1 = Robot()
 robot2 = Robot()
 
-robot2.position.set_pos(19,0)
+robot2.position.set_pos(18,2)
 
 teste = Ressource()
-
+teste.position.random_pos()
 
 
 #############################################################
