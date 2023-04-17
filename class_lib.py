@@ -58,18 +58,19 @@ class Position():
 
 
 # Battery définit la batterie des robots et diminue avec les déplacement.
-# Une fois les robots déchargés, la simulation s'arrête.
 
 class Battery:
     def __init__(self):
         self.percent = 100
         self.max_percent = 100
 
-    def lower(self):
-        self.percent = self.percent-1
 
-    def charge(self):
-        self.percent = self.max_percent
+# Stock correspond au stockage des robots (leur max et leur contenu).
+
+class Stock:
+    def __init__(self):
+        self.max = 10
+        self.content = []
 
 
 # La Team change le point d'apparition du robot
@@ -82,8 +83,9 @@ class Robot(pygame.sprite.Sprite):
         super().__init__()
         self.position = Position()
         self.battery = Battery()
+        self.stock = Stock()
         self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_right.png"), (52, 46))
-
+        self.score=0
     def switch_sprite(self, dir):
         if dir == "up":
             self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_up.png"), (52, 46))
@@ -122,12 +124,17 @@ class Ressource:
         self.position = Position()
         if self.id == 1:
             self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/pierre.png"), (52, 46))
-        if self.id == 2:
+            self.value = 10  # assign a value of 10 to Pierre
+        elif self.id == 2:
             self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/bois.png"), (52, 46))
-        if self.id == 3:
+            self.value = 5   # assign a value of 5 to Bois
+        elif self.id == 3:
             self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/eau.png"), (52, 46))
-        if self.id == 4:
+            self.value = 15  # assign a value of 15 to Eau
+        elif self.id == 4:
             self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/or.png"), (52, 46))
+            self.value = 20  # assign a value of 20 to Or
+
             
         # prix à ajouter
 
