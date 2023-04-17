@@ -24,12 +24,12 @@ Dans le cadre de notre projet, nous allons nous servir de ce language afin de co
 
 
 ### Robots
-Chaque agent a pour mission de récolter des ressources et de les ramener à sa station. Il dispose d'une batterie limitée ainsi qu'un espace de stockage limité. Il revient donc à sa station lorsque son stockage est plein ou que sa batterie est presque vide.
+Chaque agent a pour mission de récolter des ressources afin d'amasser du score. Il dispose d'une batterie limitée. Il s'arrête donc lorsque sa batterie est vide.
 
 Voici quelques information qui résument très bien le comportement des robots :
 - Un robot emprunte toujours le chemin le plus optimal vers son target
 - Un robot cible en priorité les ressources proches
-- Un robot rentre immédiatement en station quand sa batterie ou son stockage ne lui permet pas de continuer sa mission
+- Un robot s'arrête quand sa batterie ne lui permet pas de continuer sa mission
 
 ### Ressources
 
@@ -58,7 +58,7 @@ Chaque ressource apparait aléatoirement, ce qui crée donc un comportement alé
 
 ## Fonctionnement
 
-Lors du lancement du programme, les robots partent de leur station en quête de ressources à récupérer. Une fois plein, ou déchargé, chaque robot ira à sa station et ajoutera donc du score à son nom. Le premier agent qui atteint le score max met fin à la simulation.
+Lors du lancement du programme, les robots partent de leur station en quête de ressources à récupérer. Une déchargé, chaque robot s'arrête et les scores tranchent sur l'agent gagnant.
 
 ## Précisions 
 
