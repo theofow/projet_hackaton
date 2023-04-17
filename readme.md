@@ -10,13 +10,13 @@ Théophile RABUT / __theofow__
 
 Tahir Aboukhassib / __tahirabou__
 
- Geoffrey Aubrée / __Glyx__
+Geoffrey Aubrée / __Glyx__
  
- Matisse Marchand / __jsp__
+Matisse Marchand / __jsp__
 
 
 
- ### Approche du projet
+### Approche du projet
 
 Notre projet consiste en la création d'une simulation de robots autonomes en utilisant le language __python__. Ce language est très utile pour la manipulation de données.
 
@@ -90,19 +90,23 @@ Pour commencer, il faut cloner le repository github sur l'ordinateur utilisé.
 Entrez la clé __HTTP__ du repository.
 
 
-## Installation de PYGAME
+## Installation de <img src="annexes/pygame_logo.png" alt="drawing" width="70"/>
 
 - Intaller pygame sur vscode
+
 `pip install pygame`
 
+<img src="annexes/screen_install_pygame.png" alt="drawing" width="500"/> 
 
-Note:
+- Utiliser Pygame
 
-1.Le système de ressource est ouvert à tous les joueurs.
+Pour utiliser des fonctions de pygame il suffit d'utiliser `import pygame`.
 
-2.Les joueurs peuvent utiliser des stratégies différentes pour collecter des ressources.
+Cependant il faut noter qu'il sera parfois nécéssaire d'intégrer d'autres fonctions plus spécifiques.
 
-3.Les règles du jeu sont soumises à des modifications ultérieures en fonction des commentaires des joueurs.
+La documentation est accessible [ici](https://www.pygame.org/docs/) pour plus de précisions.
 
-4.Les joueurs peuvent contacter l'administrateur pour toute question ou préoccupation.
-Merci de participer à ce projet!
+
+# Lancer le projet
+
+Pour lancer le projet, utiliser `main.py` uniquement.
