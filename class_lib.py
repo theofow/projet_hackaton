@@ -58,19 +58,18 @@ class Position():
 
 
 # Battery définit la batterie des robots et diminue avec les déplacement.
+# Une fois les robots déchargés, la simulation s'arrête.
 
 class Battery:
     def __init__(self):
         self.percent = 100
         self.max_percent = 100
 
+    def lower(self):
+        self.percent = self.percent-1
 
-# Stock correspond au stockage des robots (leur max et leur contenu).
-
-class Stock:
-    def __init__(self):
-        self.max = 10
-        self.content = []
+    def charge(self):
+        self.percent = self.max_percent
 
 
 # La Team change le point d'apparition du robot
@@ -83,7 +82,6 @@ class Robot(pygame.sprite.Sprite):
         super().__init__()
         self.position = Position()
         self.battery = Battery()
-        self.stock = Stock()
         self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_right.png"), (52, 46))
 
     def switch_sprite(self, dir):

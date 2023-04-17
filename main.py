@@ -61,6 +61,10 @@ while running :
 
     pygame.display.flip()
 
+#############################################################
+#                          EVENT                            #
+#############################################################
+
     for event in pygame.event.get():
         # Cette boucle représente les évènements càd les éléments qui donnent 
         # vie au jeu et qui permette l'intéraction avec l'utilisateur
@@ -79,25 +83,37 @@ while running :
             if event.key == pygame.K_d:
                 robot2.position.deplace(1,0)
                 robot2.switch_sprite("right")
+                robot2.battery.lower
             elif event.key == pygame.K_q:
                 robot2.position.deplace(-1,0)
                 robot2.switch_sprite("left")
+                robot2.battery.lower
             elif event.key == pygame.K_s:
                 robot2.position.deplace(0,1)
                 robot2.switch_sprite("down")
+                robot2.battery.lower
             elif event.key == pygame.K_z:
                 robot2.position.deplace(0,-1)
                 robot2.switch_sprite("up")
+                robot2.battery.lower
             elif event.key == pygame.K_RIGHT:
                 robot1.position.deplace(1,0)
                 robot1.switch_sprite("right")
+                robot1.battery.lower
             elif event.key == pygame.K_LEFT:
                 robot1.position.deplace(-1,0)
                 robot1.switch_sprite("left")
+                robot1.battery.lower
             elif event.key == pygame.K_DOWN:
                 robot1.position.deplace(0,1)
                 robot1.switch_sprite("down")
+                robot1.battery.lower
             elif event.key == pygame.K_UP:
                  robot1.position.deplace(0,-1)
                  robot1.switch_sprite("up")
+                 robot1.battery.lower
 
+    #if robot1.battery == 0 or robot2.battery == 0:
+     #   running = False
+      #  pygame.quit()
+       # print("Fermeture du programme...")
