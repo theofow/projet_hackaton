@@ -1,8 +1,16 @@
+#############################################################
+#                         IMPORTS                           #
+#############################################################
+
 import pygame
 from class_lib import *
 from pygame.locals import *
 from pygame import mixer
 from Deplacement_robot import deplace
+
+#############################################################
+#               GENERATION DE LA FENETRE                    #
+#############################################################
 
 pygame.init()
 
@@ -15,6 +23,10 @@ mixer.init()
 mixer.music.load('annexes/music.ogg')
 mixer.music.play()
 
+#############################################################
+#               MISE EN PLACE DES ELEMENTS                  #
+#############################################################
+
 robot1 = Robot()
 robot2 = Robot()
 robot2.position.random_pos()
@@ -24,6 +36,11 @@ ressources = []
 for i in range(5):
     ressources.append(Ressource())
     ressources[i].position.random_pos()
+
+
+#############################################################
+#                        LANCEMENT                          #
+#############################################################
 
 running = True
 
