@@ -28,8 +28,8 @@ Chaque agent a pour mission de récolter des ressources et de les ramener à sa 
 
 Voici quelques information qui résument très bien le comportement des robots :
 - Un robot emprunte toujours le chemin le plus optimal vers son target
-- Un robot cible en priorité les ressources rentables, c'est à dire proches et chère
-- Un robot rentre immédiatement en station quand sa batterie ne lui permet pas de continuer sa mission
+- Un robot cible en priorité les ressources proches
+- Un robot rentre immédiatement en station quand sa batterie ou son stockage ne lui permet pas de continuer sa mission
 
 ### Ressources
 
@@ -39,21 +39,22 @@ Les données concernant les ressources sont :
 - Leur volume
 - Leur ID
 
->Liste des ressources:
->
->ID: 001 - Pierre
->
->ID: 002 - Bois
->
->ID: 003 - Eau
->
->ID: 004 - Or
-
-Chaque ressource apparait aléatoirement, ce qui crée donc un comportement aléatoire chez les robots qui vont cibler les ressources à portée.
-
 Classement des ressources de la moins chère à la plus chère : 
 
 __Pierre < Bois < Eau < Or.__
+
+>Liste des ressources:
+>
+>ID: 001 - Pierre | **1pt**
+>
+>ID: 002 - Bois | **2pts**
+>
+>ID: 003 - Eau | **3pts**
+>
+>ID: 004 - Or | **5pts**
+
+Chaque ressource apparait aléatoirement, ce qui crée donc un comportement aléatoire chez les robots qui vont cibler les ressources à portée.
+
 
 ## Fonctionnement
 
