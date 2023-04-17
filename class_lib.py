@@ -73,9 +73,6 @@ class Stock:
         self.content = []
 
 
-# La Team change le point d'apparition du robot
-
-
 # Robot représente un robot au départ
 
 class Robot(pygame.sprite.Sprite):
@@ -95,7 +92,6 @@ class Robot(pygame.sprite.Sprite):
             self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_left.png"), (52, 46))
         elif dir == "right":
             self.image = pygame.transform.scale(pygame.image.load("robot_sprite/robot_right.png"), (52, 46))
-        # self.rect = self.image.get_rect()
 
 
 # Bank est la classe définissant le score obtenu par les robots
@@ -134,9 +130,6 @@ class Ressource:
         elif self.id == 4:
             self.image = pygame.transform.scale(pygame.image.load("ressources_sprite/or.png"), (52, 46))
             self.value = 20  # assign a value of 20 to Or
-
-            
-        # prix à ajouter
 
 
 # création d'un agent (test)
