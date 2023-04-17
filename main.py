@@ -46,10 +46,13 @@ running = True
 
 while running:
     screen.blit(background, (0, 0))
-
+    font = pygame.font.Font(None, 30)
+    score1 = font.render(f"Score Robot 1 : {robot1.score}", True, (255, 255, 255))
+    score2 = font.render(f"Score Robot 2 : {robot2.score}", True, (255, 255, 255))
+    screen.blit(score1, (20, 20))
+    screen.blit(score2, (20, 50))
     for ressource in ressources:
         screen.blit(ressource.image, ressource.position.xy)
-
         # si un robot est sur la ressource
         if robot1.position.coo() == ressource.position.coo():
             robot1.score += ressource.value
@@ -57,6 +60,14 @@ while running:
         elif robot2.position.coo() == ressource.position.coo():
             robot2.score += ressource.value
             ressource.position.random_pos()
+
+    # victoire ou défaite d'un robot
+    if robot1.score >= 1000:
+        print("Robot 1 gagne !")
+        running = False
+    elif robot2.score >= 1000:
+        print("Robot 2 gagne !")
+        running = False
 
     # déplacement des robots
     deplace(robot1)
