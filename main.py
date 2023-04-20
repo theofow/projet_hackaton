@@ -42,7 +42,7 @@ for i in range(5):
 #                        LANCEMENT                          #
 #############################################################
 
-running = True
+running = True 
 
 while running:
     screen.blit(background, (0, 0))
